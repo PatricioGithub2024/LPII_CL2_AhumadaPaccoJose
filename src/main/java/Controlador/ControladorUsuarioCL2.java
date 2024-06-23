@@ -6,6 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Dao.ClassUsuarioCL2Imp;
+import model.TblUsuariocl2;
+
 /**
  * Servlet implementation class ControladorUsuarioCL2
  */
@@ -33,7 +36,27 @@ public class ControladorUsuarioCL2 extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		//doGet(request, response);
+		
+		 String login = request.getParameter("usuario");
+	     String clave = request.getParameter("password");
+
+	     //instancias
+	     TblUsuariocl2 usu = new TblUsuariocl2();
+	     ClassUsuarioCL2Imp crud = new ClassUsuarioCL2Imp();
+	     
+	     usu = crud.validarUsuario(login, clave);
+
+	        if (usu != null) {
+	            
+	            request.setAttribute("mensaje", "Credenciales correctas");
+	            request.getRequestDispatcher("/MenuUsuario.jsp").forward(request, response);
+	        } else {
+	            
+	            request.setAttribute("mensaje", "Credenciales incorrectas");
+	            request.getRequestDispatcher("/LoginUsuarios.jsp").forward(request, response);
+	        }
+		
+	} 	//fin del metodo doPost
 
 }	// fin de la clase ...

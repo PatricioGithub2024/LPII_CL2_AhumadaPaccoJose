@@ -1,5 +1,14 @@
 package Interfaces;
 
-public interface IUsuariocl2 {
+import java.util.List;
 
+import model.TblUsuariocl2;
+
+public interface IUsuariocl2 {
+	
+	public void RegistrarUsuario(TblUsuariocl2 usuario);
+	
+	public List<TblUsuariocl2> ListadoUsuario();
+	
+	public TblUsuariocl2 validarUsuario(String vLogin, String vClave);
 }

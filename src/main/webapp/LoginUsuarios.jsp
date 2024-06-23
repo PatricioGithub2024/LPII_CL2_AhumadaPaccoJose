@@ -8,7 +8,7 @@
 </head>
 <body bgcolor="#c5dec9">
 <h1 align="center">Ingresar al Sistema</h1>
-<form action="ControladorUsuario" method="post">
+<form action="ControladorUsuarioCL2" method="post">
 
 <table border="2" align="center">
 
@@ -24,8 +24,10 @@
 <td colspan="2"  align="center" >
 <input type="submit" value="ingresar">
 </td>
+<p align="center"><%= request.getAttribute("mensaje") %></p>
 </tr>
 </table>
+
 
 </form>
 </body>
