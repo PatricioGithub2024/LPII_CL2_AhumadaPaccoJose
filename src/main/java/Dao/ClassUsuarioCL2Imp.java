@@ -65,7 +65,7 @@ public class ClassUsuarioCL2Imp implements IUsuariocl2{
 	            
 	            usuario = query.getSingleResult();
 	        } catch (NoResultException e) {
-	            // No se encontró al usuario
+	            // Usuario no encontrado
 	            usuario = null;
 	        } finally {
 	            em.close();

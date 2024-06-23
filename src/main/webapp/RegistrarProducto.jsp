@@ -25,7 +25,17 @@
 </tr>
 <tr>
 <td>Estado</td>
-<td><input type="text" name="estado"></td>
+
+
+<td>
+<select name="estado">
+	<option >Vigente</option>
+	<option >Agotado</option>
+</select>
+</td>
+
+
+
 </tr>
 <tr>
 <td>Descrip</td>

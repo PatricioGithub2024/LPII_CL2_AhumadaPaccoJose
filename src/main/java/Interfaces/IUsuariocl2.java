@@ -6,9 +6,8 @@ import model.TblUsuariocl2;
 
 public interface IUsuariocl2 {
 	
-	public void RegistrarUsuario(TblUsuariocl2 usuario);
-	
+	//declaremos los metodos
+	public void RegistrarUsuario(TblUsuariocl2 usuario);	
 	public List<TblUsuariocl2> ListadoUsuario();
-	
 	public TblUsuariocl2 validarUsuario(String vLogin, String vClave);
 }
